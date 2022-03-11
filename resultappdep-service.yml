@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resultsapp-service
+  labels:
+    name: resultsapp-service
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    name: resultapp-deployment
+...
